@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row, Col, Badge } from 'react-bootstrap'
-import Moment from 'react-moment'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import JobCard from '../components/JobCard'
 
 export default function Jobs() {
     let [jobList, setJobList] = useState(null)
-    let history = useHistory()
 
     const getJobList = async() => {
-        let url = 'http://localhost:3001/jobs'
+        let url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/jobs`
         let data = await fetch(url)
         let result = await data.json()
         
@@ -46,6 +44,9 @@ export default function Jobs() {
             </div>
 
             <Container>
+                <h1>
+                    {jobList && jobList.length} available IT job{jobList.length !=1 ? 's' : ''} in Vietnam
+                </h1>
                 {jobList && jobList.map(item => <JobCard job={item} key={item.id} /> )}
             </Container>
         </div>
