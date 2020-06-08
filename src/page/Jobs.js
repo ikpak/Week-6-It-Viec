@@ -44,9 +44,6 @@ export default function Jobs() {
             </div>
 
             <Container>
-                <h1>
-                    {jobList && jobList.length} available IT job{jobList.length !=1 ? 's' : ''} in Vietnam
-                </h1>
                 {jobList && jobList.map(item => <JobCard job={item} key={item.id} /> )}
             </Container>
         </div>
