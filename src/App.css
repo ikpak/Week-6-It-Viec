@@ -1,38 +1,159 @@
-.App {
+/* Navigation Bar */
+.navbar {
+  background-color: #221F20;
+}
+
+.navLogo {
+  width: 80px;
+}
+
+/* Keyword / Area Filter */
+.filter {
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #221F20;
+}
+
+.searchIcon > i {
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 23px;
+  color: #6D6D6D;
+}
+
+.search > input {
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #BEBEBE;
+  margin-right: 20px;
+  padding-left: 45px;
+  color: #6D6D6D;
+}
+
+.cityFilter > select {
+  height: 60px;
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid #BEBEBE;
+  margin-right: 20px;
+  color: #333333;
+}
+
+.cityFilter > select > option {
+  color: #333333;
+}
+
+.searchBtn > button {
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+  background-color: #EA1E30;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Job List */
+.jobRow {
+  padding: 20px 0;
+  border-top: 2px solid rgba(255,192,121,0.5);
+}
+
+.imgCol {
+  display: flex;
+  align-items: center;
+}
+
+.addCol {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.jobDesc > h2 {
+  font-size: 22px;
+}
+
+.jobDesc > h2:hover {
+  color: #EA1E30;
+  cursor: pointer;
+}
+
+.salary {
+  color: #808080;
+}
+
+.jobDesc > ul {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.badge {
+  margin-right: 6px;
+  padding: 5px 10px !important;
+  background-color: #EA1E30 !important; 
+}
+
+.hotBadge {
+  margin-bottom: 15px;
+  padding: 5px 10px !important;
+  background-color: #FF9E34 !important;
+  font-size: 14px !important;
+}
+
+.jobAdd {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #A6A8AB;
+}
+
+.jobPosted {
+  text-align: right;
+  font-size: 16px;
+  color: #0066CC;
+}
+
+/* Login */
+.loginContainer {
+  margin-top: 50px;
+  max-width: 500px !important;
+}
+
+.loginHead {
+  background-color: #221F20;
+  color: white;
+  padding: 15px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loginHead > h1 {
+  font-size: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.email {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.password {
+  margin-top: 20px;
+}
+
+.btnDiv {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.loginBtn {
+  margin-top: 20px;
+  background-color: #EA1E30 !important;
+  border: 0 !important;
+  padding: 10px 40px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginBtn:hover {
+  opacity: 90%;
 }
