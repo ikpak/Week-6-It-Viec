@@ -56,6 +56,10 @@
   font-weight: 500;
 }
 
+.searchBtn > button:hover {
+  background-color: rgb(234, 30, 48, 0.9);
+}
+
 /* Job List */
 .jobRow {
   padding: 20px 0;
@@ -155,5 +159,5 @@
 }
 
 .loginBtn:hover {
-  opacity: 90%;
+  background-color: rgb(234, 30, 48, 0.9);
 }

@@ -1,22 +1,56 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
 import JobCard from '../components/JobCard'
+import { useHistory, useLocation } from 'react-router-dom'
+
+const QUERYSTR_PREFIX = 'q'
+
+function useQuery() {
+    return new URLSearchParams(useLocation().search)
+}
+
+let originalList = []
 
 export default function Jobs() {
+    let query = useQuery()
+    let history = useHistory()
     let [jobList, setJobList] = useState(null)
+    let [keyword, setKeyword] = useState(query.get(QUERYSTR_PREFIX))
 
     const getJobList = async() => {
         let url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/jobs`
         let data = await fetch(url)
         let result = await data.json()
         
+        originalList = result
+
         setJobList(result)
+
+        searchByKeyword()
+    }
+
+    const searchByKeyword = (e) => {
+        if(e) {
+            e.preventDefault()
+            history.push(`/jobs/?${QUERYSTR_PREFIX}=${keyword}`)
+        }
+
+        let filteredList = originalList
+
+        if(keyword) {
+            filteredList = originalList.filter(item => item.title.includes(keyword))
+        }
+
+        setJobList(filteredList)
     }
 
     useEffect(() => {
         getJobList()
     }, [])
+
+    if(jobList === null) {
+        return <span>Loading...</span>
+    }
 
     return (
         <div>
@@ -25,7 +59,7 @@ export default function Jobs() {
                     <Row>
                         <Col md={7} className="search">
                         <span className="searchIcon"><i class="fas fa-search"></i></span>
-                        <input type="text" placeholder="Search"></input>
+                        <input type="text" placeholder="Search" onChange={(e) => setKeyword(e.target.value)}></input>
                         </Col>
                         <Col md={3} className="cityFilter">
                         <select>
@@ -37,7 +71,7 @@ export default function Jobs() {
                         </select>
                         </Col>
                         <Col md={2} className="searchBtn">
-                        <button>Search</button>
+                        <button onClick={(e) => searchByKeyword(e)}>Search</button>
                         </Col>
                     </Row>
                 </Container>
