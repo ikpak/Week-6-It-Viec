@@ -159,5 +159,61 @@
 }
 
 .loginBtn:hover {
-  background-color: rgb(234, 30, 48, 0.9);
+  background-color: rgb(234, 30, 48, 0.9) !important;
+}
+
+/* Job Details */
+.detailContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.detailRow {
+  max-width: 900px;
+}
+
+.detailTitle {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.detailBadge {
+  margin-right: 10px;
+  padding: 5px 10px !important;
+  font-size: 14px !important;
+}
+
+.detailInfo {
+  margin-top: 20px;
+}
+
+.detailInfo > div {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #0066CC;
+}
+
+.detailInfo > div > i {
+  margin-right: 5px;
+}
+
+.detailDesc {
+  margin-top: 30px;
+}
+
+.detailBen {
+  margin-top: 20px;
+}
+
+.detailBtn {
+  width: 100%;
+  background-color: #EA1E30 !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  margin-top: 10px;
+}
+
+.detailBtn:hover {
+  background-color: rgb(234, 30, 48, 0.9) !important;
 }

@@ -5,7 +5,7 @@ import Jobs from "./page/Jobs";
 import Detail from "./page/Detail"
 import Login from "./page/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { useSelector } from 'react-redux'
 
 function App() {

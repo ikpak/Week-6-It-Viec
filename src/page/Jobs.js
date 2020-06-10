@@ -38,7 +38,7 @@ export default function Jobs() {
         let filteredList = originalList
 
         if(keyword) {
-            filteredList = originalList.filter(item => item.title.includes(keyword))
+            filteredList = originalList.filter(item => item.title.toLowerCase().includes(keyword.toLowerCase()))
         }
 
         setJobList(filteredList)
