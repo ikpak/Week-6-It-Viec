@@ -5,13 +5,14 @@ import Jobs from "./page/Jobs";
 import Detail from "./page/Detail"
 import Login from "./page/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Row, Col } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
+import { useSelector } from 'react-redux'
 
 function App() {
-  let [user, setUser] = useState(false)
+  let state = useSelector(state => state)
 
   const ProtectedRoute = (props) => {
-    if(user === true) {
+    if(state.user.login) {
       return <Route {...props} />
     } else {
       return <Redirect to="/login" />
