@@ -78,6 +78,9 @@ export default function Jobs() {
             </div>
 
             <Container className="jobListCont">
+                <div>
+                    <h1>Job List</h1>
+                </div>
                 {jobList && jobList.map(item => <JobCard job={item} key={item.id} /> )}
             </Container>
         </div>
