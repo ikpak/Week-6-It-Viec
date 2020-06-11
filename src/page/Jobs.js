@@ -77,7 +77,7 @@ export default function Jobs() {
                 </Container>
             </div>
 
-            <Container>
+            <Container className="jobListCont">
                 {jobList && jobList.map(item => <JobCard job={item} key={item.id} /> )}
             </Container>
         </div>

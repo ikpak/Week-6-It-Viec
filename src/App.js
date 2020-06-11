@@ -9,10 +9,10 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { useSelector } from 'react-redux'
 
 function App() {
-  let state = useSelector(state => state)
+  let user = useSelector(state => state.user)
 
   const ProtectedRoute = (props) => {
-    if(state.user.login) {
+    if(user.login === true) {
       return <Route {...props} />
     } else {
       return <Redirect to="/login" />

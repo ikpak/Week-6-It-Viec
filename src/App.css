@@ -1,3 +1,8 @@
+/* Body */
+.body {
+  background-color: #E9E9E9;
+}
+
 /* Navigation Bar */
 .navbar {
   background-color: #221F20;
@@ -9,7 +14,6 @@
 
 /* Keyword / Area Filter */
 .filter {
-  margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #221F20;
@@ -61,9 +65,15 @@
 }
 
 /* Job List */
+.jobListCont {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .jobRow {
   padding: 20px 0;
   border-top: 2px solid rgba(255,192,121,0.5);
+  background-color: white;
 }
 
 .imgCol {
@@ -123,8 +133,13 @@
 
 /* Login */
 .loginContainer {
-  margin-top: 50px;
+  margin-top: 40px;
   max-width: 500px !important;
+}
+
+.loginBox {
+  background-color: white;
+  padding: 30px;
 }
 
 .loginHead {
@@ -170,11 +185,14 @@
 
 .detailRow {
   max-width: 900px;
+  background-color: white;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .detailTitle {
   font-size: 30px;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 
