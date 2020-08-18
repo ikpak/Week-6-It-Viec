@@ -64,10 +64,6 @@ export default function Jobs() {
                         <Col md={3} className="cityFilter">
                         <select>
                             <option>All Cities</option>
-                            <option>Ho Chi Minh</option>
-                            <option>Hanoi</option>
-                            <option>Da Nang</option>
-                            <option>Other</option>
                         </select>
                         </Col>
                         <Col md={2} className="searchBtn">
